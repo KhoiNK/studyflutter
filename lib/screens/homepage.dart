@@ -13,8 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.white,
         body: Container(
           child: LoginScreen(
-            backgroundColor: Colors.white,
-            backgroundImage: new AssetImage("assets/images/landing.jpg"),
+            backgroundColor: Colors.white
           ),
         ));
   }
