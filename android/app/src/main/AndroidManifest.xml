@@ -36,7 +36,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data
-                    android:host="dev-0-i4imh7.auth0.com"
+                    android:host="lanaed.auth0.com"
                     android:pathPrefix="/android/${applicationId}/callback"
                     android:scheme="${applicationId}"
                 />

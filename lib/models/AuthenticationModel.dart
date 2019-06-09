@@ -27,17 +27,15 @@ class Authentication {
 class AuthenticationState {
   final bool isAuthenticating;
   final bool isAuthenticated;
-  final User user;
 
   AuthenticationState(
-      {this.isAuthenticated = false, this.isAuthenticating = false, this.user});
+      {this.isAuthenticated = false, this.isAuthenticating = false});
 
   AuthenticationState copyWith(
       {bool isAuthenticated, bool isAuthenticating, String error, User user}) {
     return new AuthenticationState(
       isAuthenticated: isAuthenticated ?? this.isAuthenticated,
-      isAuthenticating: isAuthenticating ?? this.isAuthenticating,
-      user: user ?? this.user,
+      isAuthenticating: isAuthenticating ?? this.isAuthenticating
     );
   }
 
@@ -45,7 +43,6 @@ class AuthenticationState {
     return AuthenticationState(
       isAuthenticated: parsedJson['isAuthenticated'],
       isAuthenticating: parsedJson['isAuthenticating'],
-      user: parsedJson['user'] == null ? null : new User.fromJSON(parsedJson['user'])
     );
   }
 }
